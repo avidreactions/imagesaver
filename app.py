@@ -1,9 +1,10 @@
 import os
 
 def create_folder():
+  folder_path = "imagesaver/"
   try:
     folder_name = input("Enter Folder Name:- ")
-    os.mkdir(folder_name)
+    os.mkdir(folder_path + folder_name)
 
   except:
     print("Folder Exist with that name!")

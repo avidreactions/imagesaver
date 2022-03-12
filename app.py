@@ -1,4 +1,6 @@
 import os
+import requests
+from bs4 import *
 
 def create_folder():
   folder_path = "imagesaver/"

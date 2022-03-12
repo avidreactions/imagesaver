@@ -6,12 +6,11 @@ def create_folder():
   folder_path = "imagesaver/"
   try:
     folder_name = input("Enter Folder Name:- ")
-    os.mkdir(folder_path + folder_name)
+    os.makedirs(folder_path + folder_name)
 
   except:
     print("Folder Exist with that name!")
     create_folder()
-
 
 def grab_images(url):
   print(f"grabbing images from {url}");

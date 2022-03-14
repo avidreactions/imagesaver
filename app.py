@@ -2,17 +2,6 @@ import os
 import requests
 from bs4 import *
 
-def create_folder(images):
-  try:
-    folder_name = input("Enter Folder Name: ")
-    full_path = "imagesaver/" + folder_name
-    os.makedirs(full_path);
-
-  except:
-    print("Folder Exist with that name!")
-    create_folder()
-  download_images(images, full_path)
-
 def download_images(images, folder_name):
   count = 0;
   print(f"total {len(images)} have been found!");
@@ -55,8 +44,4 @@ def grab_images(url):
 
   images = soup.findAll('img');
 
-  create_folder(images);
-
-url = input('Please enter url: ');
-
-grab_images(url);
+  download_images(images, "downloads");
